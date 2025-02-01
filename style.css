@@ -116,6 +116,9 @@ body{
 .actions span{
     color: var(--shodow);
 }
+.actions p{
+    font-weight: 800;
+}
 .actions *{
     margin: 0 ;
 }
