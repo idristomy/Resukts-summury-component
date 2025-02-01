@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Hanken Grotesk", serif;
+}
+
+:root{
+    --bg-gradient: linear-gradient(to top, hsl(241, 81%, 54%),hsl(252, 100%, 67%));
+    --bg-circle-gradient: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    --dark-gray: hsl(224, 30%, 27%);
+    --shodow: hsl(241, 100%, 89%);
+    --main-bg-color: hsl(223, 100%, 94%);
+    --card-bg-color: hsl(0, 0%, 100%);
+}
+
+body{
+    height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+.row{
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 2px var(--shodow);
+}
+.left{
+    background-image: var(--bg-gradient);
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 0 ;
+}
+.left h5{
+    color: var(--shodow);
+    font-weight: 600;
+}
+
+.rounded-circle{
+    background-image: var(--bg-circle-gradient);
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+}
+.rounded-circle p{
+    color: var(--shodow);
+    font-size: 12px;
+}
+.rounded-circle h2{
+    color: var(--card-bg-color);
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.left h1{
+    color: var(--card-bg-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.left p {
+    color: var(--shodow);
+    font-size: 14px;
+    width: 65%;
+}
+
+.right{
+    background-color: var(--card-bg-color);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.right h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn{
+    background-color: var(--dark-gray);
+    border-radius: 40px;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    right: 50%;
+    background-image: var(--bg-gradient);
+    border-radius: 40px;
+    z-index: -1;
+    transition: .4s;
+}
+
+.btn:hover::before{
+    width: 100%;
+    right: 0;
+}
+.actions span{
+    color: var(--shodow);
+}
